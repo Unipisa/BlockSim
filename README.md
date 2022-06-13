@@ -8,7 +8,7 @@ In February 2022, the existing BlockSim model of the Bitcoin protocol has been s
 
 ## Additional/Improved BlockSim Bitcoin Protocol Features
 - At consensus layer, we introduce Segregated Witness ( https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki, https://github.com/bitcoin/bips/blob/master/bip-0144.mediawiki );
-- At netwok layer, we update the simulated block propagation process. Block delay is now estimated via linear regression (almost two years of real-world Bitcoin block size and block delay data, from January 1st, 2020 to November 30th, 2021) on a per-simulated-block basis;
+- At netwok layer, we update the simulated block propagation process. Block delay is now estimated via linear regression on a per-simulated-block basis (almost two years of real-world Bitcoin block size and block delay data, from January 1st, 2020 to November 30th, 2021);
 - Up-to-date parametrization of input parameters (reflecting the state of the Bitcoin blockchain in November 2021);
 - Introducing a new performance evaluation metric: "Total reward per block", i.e., the sum of the static block reward and transaction fees per block (in BTC/block)
 
