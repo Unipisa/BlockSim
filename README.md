@@ -4,13 +4,14 @@ BlockSim simulation framework is an open source blockchain simulator developed b
 
 https://github.com/maher243/BlockSim
 
-In February 2022, the existing BlockSim model of the Bitcoin protocol has been significantly improved by University of Pisa, Dept. of Ingegneria dell'Informazione.
+In 2022, the existing BlockSim model of the Bitcoin protocol has been significantly improved by University of Pisa, Dept. of Ingegneria dell'Informazione.
 
 ## Additional/Improved BlockSim Bitcoin Protocol Features
 - At consensus layer, we introduce Segregated Witness ( https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki, https://github.com/bitcoin/bips/blob/master/bip-0144.mediawiki );
 - At netwok layer, we update the simulated block propagation process. Block delay is now estimated via linear regression (almost two years of real-world Bitcoin block size and block delay data, from January 1st, 2020 to November 30th, 2021) on a per-simulated-block basis;
 - Up-to-date parametrization of input parameters (reflecting the state of the Bitcoin blockchain in November 2021);
 - Introducing a new performance evaluation metric: "Total reward per block", i.e., the sum of the static block reward and transaction fees per block (in BTC/block)
+- Introducing a rational mining strategy in the BlockSim model of the Bitcoin Protocol. This comes in the form of two greedy transaction selection algorithm, namely PROACTION and EVILACTION. PROACTION is more profitable and only barely more harmful long term (i.e., negligibly lowering network throughout) than the state-of-the-art mining strategy. EVILACTION is a potentially evil (i.e., significantly reducing blockchain network throughout, up to 1 single transaction per block) yet an economically cost-effective strategy (i.e., negligibly lowering the long-term reward). Please edit Main.py (as described there) if you are willing to use the rational mining scheme.
 
 ## Installation and Requirements
 
@@ -43,6 +44,12 @@ The results of the simulator is printed in an excel file at the end of the simul
 ## License
 
 SimBlock is licensed under the Apache License, Version2.0.
+
+## Disclaimer
+
+If you use this software or part of it for your research, please cite our work:
+
+M. Basile, G. Nardini, P. Perazzo and G. Dini, "SegWit Extension and Improvement of the BlockSim Bitcoin Simulator," 2022 IEEE International Conference on Blockchain (Blockchain), 2022, pp. 115-123, doi: 10.1109/Blockchain55522.2022.00025.
 
 ## Contact
 
