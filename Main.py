@@ -24,6 +24,13 @@ elif p.model == 1:
     from Models.Bitcoin.BlockCommit import BlockCommit
     from Models.Bitcoin.Consensus import Consensus
     from Models.Transaction import LightTransaction as LT, FullTransaction as FT
+
+    #To use the rational mining strategy powered by the PROACTION transaction selection algorithm: i)uncomment the following line; ii)comment line #26;
+    #from Models.Proaction_no_threshold import LightTransaction as LT, FullTransaction as FT
+
+    #To use the rational mining strategy powered by the EVILACTION transaction selection algorithm: i)uncomment the following line; ii)comment line #26;
+    #from Models.Evilaction_no_threshold import LightTransaction as LT, FullTransaction as FT
+
     from Models.Bitcoin.Node import Node
     from Models.Incentives import Incentives
 
